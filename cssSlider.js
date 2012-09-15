@@ -1,7 +1,12 @@
 (function($){
-	var method = {
-		init:function(){
-			method.variable = $('#test');
+	var methods = {
+		init: function(a){
+			b = a.children('li');
+			methods.licount = b.length;
+			
+			console.log(methods.licount);
+		}
+		/*init:function(){
 			method.selectedIndex = 0;
 			method.animationSupport = Modernizr.cssanimations && Modernizr.opacity;	
 			method.nextSlide = $('#nextSlide');
@@ -102,9 +107,9 @@
 		panel4Out: function () {
 			method.animationSupport ? ($(".textpanel_4").removeClass().addClass("textpanel_4 grid_8 animateMe fadeOutRight"), $(".imagepanel_4").removeClass().addClass("imagepanel_4 grid_8 animateMe fadeOutLeft")) : ($(".textpanel_4").hide(),$(".imagepanel_4").hide());
 			$("#nav4").removeClass()
-		}
+		}*/
 	};
 	$.fn.cssSlider = function(method){
-		method.init();
+		methods.init(this);
 	};
 })(jQuery)
