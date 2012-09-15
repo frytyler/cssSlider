@@ -4,8 +4,8 @@
 			method.variable = $('#test');
 			method.selectedIndex = 0;
 			method.animationSupport = Modernizr.cssanimations && Modernizr.opacity;	
-			method.nextSlide = $('.nextSlide');
-			method.prevSlide = $('.prevSlide');
+			method.nextSlide = $('#nextSlide');
+			method.prevSlide = $('#prevSlide');
 			method.navItems = $('.navItems li');
 			method.navItemClick();
 			method.nextSlide.click(_.bind(method.nextPanel, this));
@@ -102,14 +102,6 @@
 		panel4Out: function () {
 			method.animationSupport ? ($(".textpanel_4").removeClass().addClass("textpanel_4 grid_8 animateMe fadeOutRight"), $(".imagepanel_4").removeClass().addClass("imagepanel_4 grid_8 animateMe fadeOutLeft")) : ($(".textpanel_4").hide(),$(".imagepanel_4").hide());
 			$("#nav4").removeClass()
-		},
-		tooltip: function(){
-			//$('.steps .inner').tooltip({trigger:'focus'});	
-		},
-		actions : {
-			contactSupport : function(){
-				$('#contacttype').val(1);	
-			}
 		}
 	};
 	$.fn.cssSlider = function(method){
